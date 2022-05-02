@@ -1,4 +1,6 @@
-9.
-select *
+10.
+select romanzo.titolo, romanzo.AnnoPubblicazione
 from romanzo, autore
-where romanzo.autore = autore.id and (autore.DataMorte is null or autore.LuogoMorte != "Torino")
+where romanzo.autore = autore.id and autore.LuogoNascita = "Roma"
+
+
