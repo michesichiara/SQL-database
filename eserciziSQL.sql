@@ -1,6 +1,8 @@
-11.
+12.
 select *
 from romanzo
-where romanzo.titolo like "Tokyo%"
+where romanzo.titolo like "%Sposi%"
+
+
 
 
