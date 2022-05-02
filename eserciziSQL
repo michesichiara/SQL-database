@@ -1,0 +1,4 @@
+2.
+select Titolo
+from Romanzo
+where AnnoPubblicazione > 1990
