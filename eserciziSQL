@@ -1,4 +1,5 @@
-4.
-select autore.Nome, autore.Cognome, Romanzo.Titolo
+5.
+select autore.Cognome, autore.nome, Romanzo.Titolo
 from Romanzo, Autore
 where Romanzo.Autore = Autore.ID
+order by Autore.Cognome
