@@ -1,2 +1,3 @@
 # SQL-database
-esercizi
+
+esercizi svolti con generation
