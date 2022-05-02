@@ -1,4 +1,4 @@
-2.
-select Titolo
+3.
+select *
 from Romanzo
-where AnnoPubblicazione > 1990
+where AnnoPubblicazione > 1900
