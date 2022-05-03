@@ -1,7 +1,7 @@
 use programmatori;
 
-select programmatore.codice, programma.anno
-from autore join programmatore on autore.codice = programmatore.codice
-     join programma on autore.id = programma.id
-where programmatore.categoria = 10 and programma.linguaggio != "Java"
+select a1.codice, a2.codice
+from autore a1 join programma on a1.id = programma.id
+     join autore a2 on a1.codice = a2.codice
+where programma.linguaggio = "Python" 
 
