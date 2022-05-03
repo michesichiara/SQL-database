@@ -1,6 +1,8 @@
 use programmatori;
 
-select programmatore.codice
+
+select programmatore.nome, programmatore.categoria
 from autore join programmatore on autore.codice = programmatore.codice
-     join programma on autore.id = programma.id  
-where programma.anno > 2000 and programma.linguaggio = "Java"
+     join programma on autore.id = programma.id
+where programma.linguaggio != "Python"
+order by programmatore.nome
