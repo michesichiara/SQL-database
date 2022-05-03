@@ -1,7 +1,8 @@
 use programmatori;
 
-select a1.codice, a2.codice
-from autore a1 join programma on a1.id = programma.id
-     join autore a2 on a1.codice = a2.codice
-where programma.linguaggio = "Python" 
+select programmatore.codice, programma.anno, count(programma.id)
+from autore join programmatore on autore.codice = programmatore.codice
+     join programma on autore.id = programma.id
+group by programmatore.codice, programma.anno   
+ 
 
