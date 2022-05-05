@@ -1,7 +1,8 @@
 use scalatori;
 
-
-select *
-from scalata join nazione on nazione.nome = scalata.nazione
-    join scalatore on scalatore.CF = scalata.scalatore
-where (scalata.anno - scalatore.annoNascita) < 18 
+select distinct scalatore.*
+from scalatore join scalata on scalatore.cf = scalata.scalatore
+where scalatore.nazioneNascita in
+    (select scalata.nazione
+     from scalata
+     where (scalata.anno - scalatore.annoNascita) < 18)
